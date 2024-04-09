@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses Tracker</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <div class="headerBar">
+    <header>
+      <h1 class="title">My Expense Tracker</h1>
+      <h2 class="topbar">Your Current Balance</h2>
+      <p>
+        <span class="currency">$</span>
+        <span class="balance"></span>
+      </p>
+      <header>
+  </div>
+  <div class="content">
+    <h3 class="secondTitle" id="headingAdd">Add a new transaction: </h3>
+    <div class="form" id="frmTrans">
+      <div class="formLine left">
+        <span for="type">Type:</span>
+        <select id="type">
+          <option value="chooseOne">Choose one...</option>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+      </div>
+      <div class="formLine right">
+        <span for="name">Name:</span>
+        <input type="text" id="name">
+      </div>
+
+      <div class="formLine right">
+        <span for="amount">Amount:</span>
+        <input type="text" id="amount">
+      </div>
+      <button type="button" class="buttonSave" id="btnadd" onclick="addTransaction()">Add to transactions</button>
+    </div>
+  </div>
+  <div class="content">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Name</th>
+          <th>Amount</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody id="transactionTable"></tbody>
+    </table>
+  </div>
+</body>
+
+</html>
